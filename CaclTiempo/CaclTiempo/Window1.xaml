@@ -1,0 +1,35 @@
+﻿<Window x:Class="CaclTiempo.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CaclTiempo"
+        mc:Ignorable="d"
+        Title="Window1" Height="660" Width="1210">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250*"/>
+            <ColumnDefinition Width="960*"/>
+        </Grid.ColumnDefinitions>
+        <Frame x:Name="FrameIzquierdo" Content="Frame" Margin="0,0,0,0" Grid.Column="1" NavigationUIVisibility="Hidden">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF00080B"/>
+                    <GradientStop Color="#FF01658A" Offset="0.51"/>
+                </LinearGradientBrush>
+            </Frame.Background>
+        </Frame>
+        <Frame x:Name="FrameDerecho" Content="Frame" Margin="0,0,0,0" Source="/CaclTiempo;component/Usuarios.xaml" NavigationUIVisibility="Hidden">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF00080B"/>
+                    <GradientStop Color="#FF01658A" Offset="0.51"/>
+                </LinearGradientBrush>
+            </Frame.Background>
+        </Frame>
+
+    </Grid>
+</Window>
